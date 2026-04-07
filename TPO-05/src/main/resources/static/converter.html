@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Converter</h1>
+<form action="/convert" method="post">
+    <div>
+    <label for="num">Number:</label>
+    <input id="num" type="text" name="number" placeholder="Enter a number">
+    </div><div>
+    <label for="fromBase">Base from which to convert:</label>
+    <input id="fromBase" type="text" name="fromBase" placeholder="2-36">
+</div><div>
+    <label for="toBase">Base to which convert:</label>
+    <input id="toBase" type="text" name="toBase" placeholder="2-36">
+</div><div>
+    <button type="submit">Convert</button>
+</div>
+</form>
+</body>
+</html>
