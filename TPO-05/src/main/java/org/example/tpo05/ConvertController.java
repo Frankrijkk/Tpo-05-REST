@@ -46,8 +46,9 @@ public class ConvertController {
         String oct = "<div> OCT: " +Integer.toOctalString(num) + "</div>";
         String hex = "<div> HEX: "+Integer.toHexString(num) + "</div>";
         String result = "<div> BASE "+ to +": " + Integer.toString(num, to);
-        String resultString = "<h1>Converted:</h1>" + dec + bin + oct + hex + result  + fromBaseError + toBaseError + "";
-        return resultString;
+        String resultString = "<div class='result-container'><h1>Converted:</h1>" + dec + bin + oct + hex + result  + fromBaseError + toBaseError + "<div <br> <a href='/converter.html'> Back</a></div></div>";
+        String head="<head><link rel='stylesheet' href='/stylesheets/style.css'></head>";
+        return head+resultString;
     }
 
 }

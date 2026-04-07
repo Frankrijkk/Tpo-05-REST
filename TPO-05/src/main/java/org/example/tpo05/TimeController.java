@@ -41,13 +41,15 @@ public class TimeController {
             formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSSS dd-MM-yyyy");
             formatError = e.getMessage();
         }
-        String datetime = "<div>"+zonedDateTime.format(formatter) + "</div> <div>" + timeError + "</div><div>" + formatError + "</div>";
-        return datetime;
+        String datetime = "<div class='result-container'><h2>Current Time</h2>"+zonedDateTime.format(formatter) + "</div> <div>" + timeError + "</div><div>" + formatError + "</div>";
+        String head="<head><link rel='stylesheet' href='/stylesheets/style.css'></head>";
+        return head+ datetime;
     }
     @GetMapping("/current-year")
     @ResponseBody
     public String getYear() {
         LocalDate localDate = LocalDate.now();
-        return localDate.getYear()+"";
+        String head="<head><link rel='stylesheet' href='/stylesheets/style.css'></head>";
+        return head+localDate.getYear();
     }
 }
